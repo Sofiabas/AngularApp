@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor=" let nombrepersona of listadoalumnos" [ngClass]="forma">
+{{'Nombre' | miPipe : 'Mayus'}} {{nombrepersona}}
+    </li>
+</ul>
+<button (click)="fijar()">Fijar clases</button>
+<button (click)="eliminar()">Eliminar clases</button>
