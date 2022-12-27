@@ -1,0 +1,25 @@
+<div class="sectionContainer">
+
+
+    <h1>Trending Movies with OBSERVABLE</h1>
+    <div *ngFor="let dato of movies " class="listContainer">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title class="title">{{dato.original_title}}</mat-card-title>
+                <mat-card-subtitle>Release Date: {{dato.release_date}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-l-image src="{{'https://image.tmdb.org/t/p/w500'+dato.poster_path}}" alt="Photo film">
+            <mat-card-content>
+                <p>
+                    {{dato.overview}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <div mat-button>Vote Average : {{dato.vote_average}} </div>
+                <div mat-button>Popularity : {{dato.popularity}} </div>
+            </mat-card-actions>
+        </mat-card>
+        <br>
+    </div>
+</div>
